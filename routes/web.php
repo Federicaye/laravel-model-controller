@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/books', [BookController::class,'index']);
-Route::get('/movies', [MovieController::class,'index']);
+Route::get('/books', [BookController::class,'index'])->name('books.index');
+Route::get('/movies', [MovieController::class,'index'])->name('movies.index');
 Route::get('/movies/{item}', [MovieController::class,'show'])->name('movies.show');
+Route::get('/books/{item}', [BookController::class,'index'])->name('books.show');
