@@ -12,3 +12,9 @@ $fa-font-path: "../webfonts" !default;
 h1 {
     color: $text-color;
 }
+
+.card-catalog {
+    width: calc(100% / 4 - 0.75rem);
+    height: 500px;
+    overflow-y: scroll;
+}
