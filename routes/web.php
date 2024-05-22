@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\MovieController;
 use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/books', [BookController::class,'index']);
+Route::get('/movies', [MovieController::class,'index']);
+Route::get('/movies/{item}', [MovieController::class,'show'])->name('movies.show');
