@@ -9,8 +9,10 @@ class BookController extends Controller
 {
     public function index(){
         $books = Book::all();
-        $bookId = Book::where('id', 6)->get();
-        return view("books.index", compact("books", "bookId"));
+        $booksArray = $books ->toArray();
+        $jsonBooks = json_encode($booksArray);
+        file_put_contents('books.json', $jsonBooks);
+        return view("books.index", compact("books")); 
        
     }
 
@@ -19,5 +21,5 @@ class BookController extends Controller
         $book = Book::findOrFail($id);
         return view('books.show', compact('book'));
     }
-
+    
 }

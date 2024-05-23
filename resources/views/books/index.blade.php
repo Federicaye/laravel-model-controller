@@ -12,17 +12,23 @@
      <p><a href="{{route('books.show', $item->id)}}">details</a></p>
      </div>
 @endforeach
+
 </div>
 
 @endsection
 
 @section('content')
-@foreach ($books as $item)
+<!-- @foreach ($books as $item)
 @if($item->id > 4 ) 
     
      @include('partials.card')
      <p><a href="{{route('books.show', $item->id)}}">details</a></p>
    @endif
-@endforeach
+@endforeach -->
 
+
+<div class="selectedBook">
+     
+</div>
 @endsection
+
