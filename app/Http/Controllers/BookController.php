@@ -9,7 +9,9 @@ class BookController extends Controller
 {
     public function index(){
         $books = Book::all();
-        return view("books.index", compact("books"));
+        $bookId = Book::where('id', 6)->get();
+        return view("books.index", compact("books", "bookId"));
+       
     }
 
     public function show($id)
@@ -17,4 +19,5 @@ class BookController extends Controller
         $book = Book::findOrFail($id);
         return view('books.show', compact('book'));
     }
+
 }

@@ -13,3 +13,13 @@
 </div>
 
 @endsection
+
+@section('content')
+@foreach ($bookId as $item)
+    
+     @include('partials.card')
+     <p><a href="{{route('books.show', $item->id)}}">details</a></p>
+   
+@endforeach
+
+@endsection
