@@ -13,7 +13,7 @@ detailsButton.forEach(function (button) {
         idActive = this.id;
         console.log(idActive);
         let selectedBook = document.querySelector('.selectedBook');
-        selectedBook.innerHTML = `<p>${jsonBooks[idActive-1].title}</p>`;
+        selectedBook.innerHTML = `<p>${jsonBooks[idActive-1].title}</p><p>${jsonBooks[idActive-1].plot}`;
     })
 })
 
