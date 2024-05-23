@@ -13,3 +13,13 @@
 </div>
 
 @endsection
+@section('content')
+@foreach ($movies as $item)
+@if($item->id > 4 ) 
+    
+     @include('partials.card')
+     <p><a href="{{route('books.show', $item->id)}}">details</a></p>
+   @endif
+@endforeach
+
+@endsection

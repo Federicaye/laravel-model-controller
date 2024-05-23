@@ -9,7 +9,8 @@ class MovieController extends Controller
 {
     public function index(){
         $movies = Movie::all();
-        return view("movies.index", compact("movies"));
+        $movieId = Movie::where('id', 6)->get();
+        return view("movies.index", compact("movies", "movieId"));
     }
 
     public function show($id)
